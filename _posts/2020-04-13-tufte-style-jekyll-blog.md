@@ -5,7 +5,7 @@ date:   2020-04-13 09:46:04
 categories: jekyll css
 ---
 
-{% newthought 'The Tufte Jekyll theme' %} is an attempt to create a website design with the look and feel of Edward Tufte's books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.<!--more--> The idea for this project is essentially cribbed wholesale from Tufte and R Markdown's Tufte Handout format{% sidenote 'One' 'See [tufte-latex.github.io/tufte-latex/](https://tufte-latex.github.io/tufte-latex/) and [rmarkdown.rstudio.com/tufte_handout_format](http://rmarkdown.rstudio.com/tufte_handout_format.html)' %} This page is an adaptation of the [Tufte Handout PDF](http://rmarkdown.rstudio.com/examples/tufte-handout.pdf).
+<span class="newthought">The Tufte Jekyll theme</span> is an attempt to create a website design with the look and feel of Edward Tufte's books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.<!--more--> The idea for this project is essentially cribbed wholesale from Tufte and R Markdown's Tufte Handout format{% sidenote 'One' 'See [tufte-latex.github.io/tufte-latex/](https://tufte-latex.github.io/tufte-latex/) and [rmarkdown.rstudio.com/tufte_handout_format](http://rmarkdown.rstudio.com/tufte_handout_format.html)</span> This page is an adaptation of the [Tufte Handout PDF](http://rmarkdown.rstudio.com/examples/tufte-handout.pdf).
 
 ## Jekyll customizations
 
@@ -62,15 +62,15 @@ As a bonus, this excerpt regarding the use of headings provides an example of us
 
 
 
-{% newthought 'In his later books' %}{% sidenote 'two' '[http://www.edwardtufte.com/tufte/books_be](http://www.edwardtufte.com/tufte/books_be)'%}, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, enclose the sentence fragment you want styled with small caps in a custom Liquid tag called 'newthought' like so:
+<span class="newthought">In his later books</span>{% sidenote 'two' '[http://www.edwardtufte.com/tufte/books_be](http://www.edwardtufte.com/tufte/books_be)'%}, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, enclose the sentence fragment you want styled with small caps in a custom Liquid tag called 'newthought' like so:
 
 ```Liquid
-{{ "{% newthought 'In his later books'" }} %}
+{{ "<span class="newthought">In his later books'" }} %}
 ```
 
 ### Text
 
-In print, Tufte uses the proprietary Monotype Bembo{% sidenote 3 'See Tufte’s comment in the [Tufte book fonts](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt) thread.' %} font. A similar effect is achieved in digital formats with the now open-source ETBembo, which Tufte-Jekyll supplies with a ```@font-face``` reference to a .ttf file. Thanks to [Linjie Ding](https://github.com/daveliepmann/tufte-css/commit/0a810a7d5f4707941c6f9fe99a53ec41f50a5c00), italicized text uses the ETBembo Italic font instead of mechanically skewing the characters. In case ETBembo somehow doesn’t work, Tufte CSS degrades gracefully to other serif fonts like Palatino and Georgia. Notice that Tufte CSS includes separate font files for **bold** (strong) and *italic* (emphasis), instead of relying on the browser to mechanically transform the text. This is typographic best practice. It’s also really important. Thus concludes my unnecessary use of em and strong for the purpose of example.
+In print, Tufte uses the proprietary Monotype Bembo{% sidenote 3 'See Tufte’s comment in the [Tufte book fonts](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt) thread.</span> font. A similar effect is achieved in digital formats with the now open-source ETBembo, which Tufte-Jekyll supplies with a ```@font-face``` reference to a .ttf file. Thanks to [Linjie Ding](https://github.com/daveliepmann/tufte-css/commit/0a810a7d5f4707941c6f9fe99a53ec41f50a5c00), italicized text uses the ETBembo Italic font instead of mechanically skewing the characters. In case ETBembo somehow doesn’t work, Tufte CSS degrades gracefully to other serif fonts like Palatino and Georgia. Notice that Tufte CSS includes separate font files for **bold** (strong) and *italic* (emphasis), instead of relying on the browser to mechanically transform the text. This is typographic best practice. It’s also really important. Thus concludes my unnecessary use of em and strong for the purpose of example.
 
 Code snippets ape GitHub's font selection using Microsoft's [*Consolas*](http://www.microsoft.com/typography/ClearTypeFonts.mspx) and the sans-serif font uses Tufte's choice of Gill Sans. Since this is not a free font, and some systems will not have it installed, the free google font [*Lato*](https://www.google.com/fonts/specimen/Lato) is designated as a fallback.
 
@@ -78,9 +78,9 @@ Code snippets ape GitHub's font selection using Microsoft's [*Consolas*](http://
 
 <h2 id="epigraphs">Epigraphs</h2>
 
-{% epigraph 'The English language . . . becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.' 'George Orwell' ' "Politics and the English Language" ' %}
+{% epigraph 'The English language . . . becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.' 'George Orwell' ' "Politics and the English Language" </span>
 
-{% epigraph 'For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.' 'Richard P. Feynman' ' “What Do You Care What Other People Think?” ' %}
+{% epigraph 'For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.' 'Richard P. Feynman' ' “What Do You Care What Other People Think?” </span>
 
 
 
@@ -92,7 +92,7 @@ In order to use an epigraph in a page or section, type this:
 
 to produce this:
 
-{% epigraph 'I do not paint things, I paint only the differences between things.' 'Henri Matisse' 'Henri Matisse Dessins: thèmes et variations, 1943' %}
+{% epigraph 'I do not paint things, I paint only the differences between things.' 'Henri Matisse' 'Henri Matisse Dessins: thèmes et variations, 1943</span>
 
 {% epigraph  ' "How did you go bankrupt?" Two ways. Gradually, then suddenly.' 'Ernest Hemingway' ' "The Sun Also Rises" '%}
 
@@ -157,7 +157,7 @@ Sidenotes{% sidenote 'sn-id-whatever' 'This is a sidenote and *displays a supers
 
 ### Margin notes
 
-Margin notes{% marginnote 'mn-id-whatever' 'This is a margin note *without* a superscript' %} are similar to sidenotes, but do not display a superscript. The *marginnnote* Liquid tags has the same two components as the *sidenote* tag. Anything can be placed in a margin note. Well, anything that is an inline element. Block level elements can make the Kramdown parser do strange things. On small screens, the margin notes disappear and this symbol: <span class="contrast ">&#8853;</span> pops up. When clicked, it will open the margin note below the content, which can then be closed with a similar click. The Markdown content has a similar sort of markup as a sidenote, but without a number involved:
+Margin notes{% marginnote 'mn-id-whatever' 'This is a margin note *without* a superscript</span> are similar to sidenotes, but do not display a superscript. The *marginnnote* Liquid tags has the same two components as the *sidenote* tag. Anything can be placed in a margin note. Well, anything that is an inline element. Block level elements can make the Kramdown parser do strange things. On small screens, the margin notes disappear and this symbol: <span class="contrast ">&#8853;</span> pops up. When clicked, it will open the margin note below the content, which can then be closed with a similar click. The Markdown content has a similar sort of markup as a sidenote, but without a number involved:
 
 ```{{ "{% marginnote 'mn-id-whatever' 'This is a margin note *without* a superscript'" }} %}```
 
@@ -201,7 +201,7 @@ Note that when writing Jekyll Markdown content, there will often be a need to ge
 
 Tables are designed with an ```overflow:scroll``` property to create slider bars when the viewport is narrow. This is so that you do not collapse all your beautiful data into a jumble of letters and numbers when you view it on your smartphone.
 
-{% marginnote 'table-1-id' '*Table 1*: A table with default style formatting' %}
+{% marginnote 'table-1-id' '*Table 1*: A table with default style formatting</span>
 <div class="table-wrapper">
   <table class="table-alpha" id="newspaper-tone">
     <thead>
@@ -265,7 +265,7 @@ This is not the One True Table. Such a style does not exist. One must craft each
 
 As an example of alternative table styles, academic publications written in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> often rely on the ```booktabs``` package to produce clean, clear tables. Similar results can be achieved in Tufte CSS with the ```booktabs``` class, as demonstrated in this table:
 
-{% marginnote 'table-2-id' '*Table 2*: A table with booktabs style formatting' %}
+{% marginnote 'table-2-id' '*Table 2*: A table with booktabs style formatting</span>
 <div class="table-wrapper">
 <table class="booktabs">
           <thead>
@@ -303,9 +303,9 @@ The table above was written in HTML as follows:
 ```
 
 
-{% newthought 'I like this style of table,' %}  so I have made it the default for unstyled tables. This allows use of the [*Markdown Extra*](https://michelf.ca/projects/php-markdown/extra/) features built into the [*Kramdown*](http://kramdown.gettalong.org/parser/kramdown.html) parser. Here is a table created using the Markdown Extra table syntax to make a nice table which has the side benefit of being human readable in the raw Markdown file:
+<span class="newthought">I like this style of table,</span>  so I have made it the default for unstyled tables. This allows use of the [*Markdown Extra*](https://michelf.ca/projects/php-markdown/extra/) features built into the [*Kramdown*](http://kramdown.gettalong.org/parser/kramdown.html) parser. Here is a table created using the Markdown Extra table syntax to make a nice table which has the side benefit of being human readable in the raw Markdown file:
 
-{% marginnote 'tableID-3' 'Table 3: a table created with *Markdown Extra* markup using only the default table styling' %}
+{% marginnote 'tableID-3' 'Table 3: a table created with *Markdown Extra* markup using only the default table styling</span>
 
 |                 |mpg  | cyl  |  disp  |   hp   |  drat  | wt  |
 |:----------------|----:|-----:|-------:|-------:|-------:|----:|
@@ -342,7 +342,7 @@ The following is a more simple table, showing the Markdown-style table markup. R
 
 Yields this table:
 
-{% marginnote 'Table-ID4' 'Table 4: a simple table showing left, center, and right alignment of table headings and data' %}
+{% marginnote 'Table-ID4' 'Table 4: a simple table showing left, center, and right alignment of table headings and data</span>
 
 |**Left** |**Center**|**Right**|
 |:--------|:--------:|--------:|
